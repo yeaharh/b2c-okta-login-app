@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Federated B2C Identity Provider</title>
+  <link rel="SHORTCUT ICON" href="NTT_company_logo.svg" type="image/x-icon">
+    <!-- Bootstrap 4 for UI components  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body onload="onLoadRedirect()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="NTT_company_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Federated B2C idP - Proof of Concept
+        </a>
+        <div class="btn-group ml-auto dropleft">
+            <span class="navbar-text"> Step 1: </span>
+            <button type="button" id="logoutOkta" class="btn btn-secondary" onclick="logoutOkta()">Logout Okta</button>
+            <span class="navbar-text"> Step 2: </span>
+            <button type="button" id="logoutB2C" class="btn btn-secondary" onclick="logoutB2C()">Logout B2C</button>
+        </div>    
+    </nav>
+    
+
+  <div style="text-align:center">
+    <br>
+
+    <h1 id="statusMessage">Congratuations you are logged in</h1>    
+    <h3 id="configMessage">via the B2C idP - </h3>
+    <br>
+    <br>
+    <button type="button" id="inspectJwt" class="btn btn-secondary" display="block" onclick="inspectJwt()">Inspect Jwt</button>
+    <br>
+    <br>
+  </div>
+
+
+  <script type="text/javascript" src="./setup.js"></script>
+</body>
+</html>

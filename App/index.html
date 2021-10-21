@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Federated B2C Identity Provider</title>
+  <link rel="SHORTCUT ICON" href="NTT_company_logo.svg" type="image/x-icon">
+    <!-- Bootstrap 4 for UI components  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body onload="onLoadIndex()">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+        <img src="NTT_company_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Federated B2C idP - Proof of Concept
+    </a>
+    <div class="btn-group ml-auto dropleft">
+        <span class="navbar-text">Step 1  :</span>
+        <button type="button" id="signInB2C" class="btn btn-secondary" onclick="signInB2C()">B2C Login</button>
+        <span class="navbar-text">:  Step 2  :</span>
+        <button type="button" id="signInOkta" class="btn btn-secondary" onclick="signInOkta()">Okta Login</button>
+        <select name="b2cIdP" id="b2cIdP">
+            <option value="Okta-IE-App">Okta-IE-App</option>
+            <option value="Test-Web-App">Test-Web-App</option>
+        </select>
+    </div>
+  </nav>
+
+
+  <div style="text-align:center">
+    <br>
+    <h1>Follow the Steps...</h1>
+    <br>
+    <h5><b>Step 1:</b> Log into B2C first for the SSO Experience</h5>
+    <h5><b>Step 2:</b> Log into Okta</h5>
+    <br>
+    <br>
+    <br>
+    <h5><b>Test Users</b></h5>
+    <p>1008699001	1008699002	1008699003</p>
+    <p>pwd: Welcome1</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h3><b>Okta Identity Providers</b></h3>
+        <h5>(Choice of Federated B2C IdPs to connect with)</h4>
+        <br>
+        <div>
+            <h6>Login via B2C IdP (Test-Web-App)</h6>
+            <h8>ClientId: ddd42294-b4c3-434d-9930-2a92b13a2772</h8>
+        </div>
+        <br>
+        <div>
+            <h6>Login via B2C IdP (Okta-IE)</h6>
+            <h8>ClientId: aafbe48e-da8c-4219-a3f1-f40bf3673e4a</h8>
+        </div>
+    </div>
+  </div>
+
+
+    <script type="text/javascript" src="./setup.js"></script>
+</body>
+</html>
